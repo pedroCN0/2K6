@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>2K6</title>
+
+<link rel="stylesheet" type="text/css" href="novo.css">
+<link  rel="stylesheet">
+<link rel="stylesheet"  integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="img/2K.png">
+
+<meta name="description" content="">
+	<meta charset="utf-8">
+		<meta name="keywords" content="">
+<!---->
+</head>
+<body>
+
+	<!--barra-->
+	<header id="fundo">
+		<div id="cabecario"> 
+ 			<ul>
+				<li><a  href="2K62.html"> SOBRE NÓS</a></li>
+				<li><a  href="2K63.html"> O APP</a></li>      
+				<li><a  href="2K64.html"> ENTENDA A LEI</a></li>
+				<li><a  href="2K65.html"> FALE CONOSCO</a></li>
+				<li><a href="2K67.html">TESTEMUNHOS</a></li>
+ 			</ul>
+		</div>
+
+		<!--barra-->
+		<script type="text/javascript">
+		var i = 0;
+var j = 0;
+window.onload = reset;
+imgs = ['s0.png','s1.png','s2.png'];
+function searchOpen(){
+	document.getElementById('buscar').style.display = "flex";
+	document.getElementById('inputid').style.display = "flex";
+}
+    
+function searchClose(){
+	document.getElementById('buscar').style.display = "none";
+	document.getElementById('inputid').style.display = "none";
+}
+    
+function slide(){
+	imgs = ['s0.png','s1.png','s2.png'];
+	i++;
+	if(i > 2){
+	    i = 0;
+    }
+    
+    console.log(i);
+    
+		document.getElementById('fundo').style.backgroundImage = "url('s"+i+".png";
+		if(i == 0){
+			document.getElementsByTagName('h1')[0].innerHTML = "Amar-se foi sua primeira revolução"
+        }
+        
+		if(i == 1){
+			document.getElementsByTagName('h1')[0].innerHTML = "Lute como uma garota" 
+        }
+        
+		if(i == 2){
+			document.getElementsByTagName('h1')[0].innerHTML = "Meu corpo minhas regras" 	
+        }
+        
+	reset();
+}
+    
+function name(){
+
+	if(j++ > 2){
+		j = 1;
+    }
+    
+	document.getElementById('slide-index').innerHTML = j+"/"+imgs.length;
+}
+	
+
+function reset(){
+	name();
+	setTimeout(slide,3000);
+}
+</script>
+		<!--carrossel-->
+
+		<div class="texto">
+			<h2>2K6</h2>
+			<h1></h1>
+			<h2>Projeto do 1º DS<br/>e do 2º ADM</h2>       
+			<p id="slide-index">teste</p>
+		</div>            
+	</header>
+
+	<!--carrossel-->
+
+</body>
+</html>
